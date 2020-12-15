@@ -30,13 +30,14 @@ jobs:
     - name: Setup macOS 10.15
       if: matrix.os == 'macos-10.15'
       run: |
-        sudo xcode-select -s "/Applications/Xcode_12.app"
-        export SDKROOT=/Applications/Xcode_12.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/
+        sudo xcode-select -s "/Library/Developer/CommandLineTools/"
+        export SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/
         brew bundle
 
     - name: Setup macOS 11
       if: matrix.os == 'macos-11.0'
       run: |
+        sudo xcode-select -s "/Library/Developer/CommandLineTools/"
         brew bundle
 
     - name: Create Build Environment
