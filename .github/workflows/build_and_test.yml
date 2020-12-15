@@ -26,10 +26,10 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y cmake libinsighttoolkit4-dev
 
-    - name: Setup macOS
+    - name: Setup macOS 10.15
       if: matrix.os == 'macos-10.15'
       run: |
-        sudo xcode-select -s /Library/Developer/CommandLineTools/
+        sudo xcode-select -s /Applications/Xcode_12.app/Contents/Developer/
         brew bundle
 
     - name: Create Build Environment
