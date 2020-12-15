@@ -30,6 +30,8 @@ jobs:
     - name: Setup macOS 10.15
       if: matrix.os == 'macos-10.15'
       run: |
+        sudo xcode-select -s "/Applications/Xcode_12.app"
+        export SDKROOT=/Applications/Xcode_12.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
         brew bundle
 
     - name: Setup macOS 11
