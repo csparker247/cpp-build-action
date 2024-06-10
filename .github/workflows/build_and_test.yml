@@ -36,4 +36,4 @@ jobs:
       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=$BUILD_TYPE
 
     - name: Build
-      run: cmake --build .
+      run: cmake --build build/
